@@ -1,0 +1,224 @@
+<h2>1. Présentations</h2>
+<p>Ces exercices seront différents de ce que tu as pu voir jusqu'à présent. Nous entrons dans le vif du sujet de la programmation, avec des exercices qui te feront jouer avec des notions de programmation : variables, arrays, etc..</p>
+
+<p>Tous ces programmes paraitront assez abstraits, et c'est normal. J'aimerais vous donner des exercices du genre "écris un programme qui va envoyer un message à une liste de 100 emails"; mais le soucis est que cela implique de connaître à la perfection les notions de boucles, de type de données, etc. Si tu ne sais pas boucler un programme pour qu'il compte jusqu'à 10, eh bien lui faire envoyer 100 emails sera très compliqué 😉</p>
+
+<p>Ainsi, nous allons te donner une liste d'exercices qui vont te faire jouer avec les boucles et autre joyeusetés du genre. Ce sont des notions communes à TOUS les langages de programmation, et une logique à acquérir. Au début cela fera –un peu– mal à la tête, mais cela viendra naturellement à force d'en faire. L'autre bonne nouvelle est que c'est un peu comme le vélo : cela ne s'oublie pas. Je me souviens avoir galéré pendant des heures sur la <a href="https://docs.cs50.net/problems/mario/less/mario.html" target="_blank" class="text-primary">pyramide de Mario de CS50</a>, pour au final la refaire en 20mn à peine un an après, sans avoir touché de code entre temps !</p>
+
+<h3>1.1. État d'esprit</h3>
+<p>L'état d'esprit est à la débrouille. Nous te donnons plein d'exercices, et tu dois les résoudre à la suite. Certains te paraitront étrangement simples, d'autres te feront te tirer les cheveux.</p>
+
+<p>Le but est de progresser. Si tu n'arrives pas à faire un exercice, passe au suivant, et vois si tu arrives à le faire. L'exercice final te demandera de mettre en pratique tout ce que tu auras vu lors des exercices précédents, et t'apprendra même à poser un problème pour mieux le résoudre.</p>
+
+<p>Pour chaque programme, il y a plein de solutions différentes. Ici, nous ne jugerons pas la beauté du code, mais s'il marche ou non. L'élégance du code vient avec l'expérience 😉</p>
+
+<h3>1.2. Les erreurs</h3>
+<p>Si tu as une erreur, ceci apparaitra :</p>
+<pre><code class="language-bash">$ ruby hello.rb
+hello.rb:1: unterminated string meets end of file</code></pre>
+
+<p>Il est indispensable que tu saches lire ce type d'erreurs, puisque tu vas en faire plein. Même moi il m'arrive de faire ces erreurs.</p>
+
+<p>Ces lignes indiquent :</p>
+<pre><code class="language-bash">$ ruby hello.rb</code></pre>
+<p>-> Tu as lancé le programme <code>hello.rb</code></p>
+<pre><code class="language-bash">hello.rb:1: unterminated string meets end of file</code></pre>
+<p>-> Le programme <code>hello.rb</code> a eu l'erreur suivante ligne 1 "unterminated string meets end of file". Cela veut dire qu'un string non fini a <i>rencontré une fin de ligne</i>. C'est assez cryptique aux premiers abords, mais tu as 1️⃣ la localisation de ton erreur 2️⃣ un ordre de grandeur qui t'indique grosso modo une erreur en rapport avec un string et une fin de ligne. La première chose à faire est d'aller dans ton programme, ligne 1. Le programme ressemble à ceci :</p>
+<pre><code class="language-ruby">puts "Bonjour monde !</code></pre>
+<p>🤔 Il n'aime pas cette ligne. Et finalement après quelque temps, tu remarques qu'il manque le <code>"</code> fermant ton string. Tu l'ajoutes, relances le programme, et ça marche, miracle !</p>
+
+<p>Si lire des erreurs au début peut te paraitre un peu barbare, cela sera rapidement une seconde nature. Comme dit précédemment, de même que tous les développeurs, tu en feras toute ta vie des erreurs, donc bien savoir les lire est indispensable à l'univers du code.</p>
+
+<h3>1.3. Savoir rechercher ce que l'on veut</h3>
+<p>Tout bon développeur qui se respecte le dira : savoir rechercher l'information est indispensable quand on fait des programmes informatiques. Que ce soit pour trouver la bonne fonction qui gère notre programme ou bien trouver la réponse à l'erreur incompréhensible sortie par Ruby.</p>
+
+<p>Prenons l'exemple de notre erreur ci-haut, qui était "unterminated string meets end of file", une recherche Google avec <code>ruby unterminated string meets end of file</code> te donnera <a href="https://www.codecademy.com/en/forum_questions/51d7d46b8c1ccc26dc028425" target="_blank" class="text-primary">la réponse</a> en quelques résultats à peine.</p>
+
+
+<div class="card box-shadow-0 border-info">
+  <div class="card-content collapse show">
+    <div class="card-body">
+      <h4 class="card-title">🚀 ALERTE BONNE ASTUCE</h4>
+      <p class="card-text">L'univers du code est anglophone, donc il y aura 50 fois plus de résultats en anglais qu'en français. Ainsi, mets dès aujourd'hui ton terminal en anglais afin de pouvoir copier-coller l'erreur en anglais. Ce sera plus simple pour toi de trouver la solution.</p>
+    </div>
+  </div>
+</div>
+
+
+<h2>2. Les exercices</h2>
+<p>Voici ce qui va se passer pour cet exercice : pour chaque sous-partie, nous allons te demander de créer un programme, et de soit répondre à des questions, soit de le faire marcher.</p>
+
+<p>Nous te conseillons de tout mettre dans un joli repo Git, afin que tu t'entraines avec le programme de versionning.</p>
+
+<h3>2.1. Bonjour monde</h3>
+<p>Créé un programme <code>exo_01.rb</code> qui affiche "Bonjour, monde !". Voici les lignes qu'il doit avoir d'affichées lorsque tu l'exécutes :</p>
+<pre><code class="language-bash">$ ruby exo_01.rb
+Bonjour, monde !</code></pre>
+
+<h3>2.2. Bonjours, monde</h3>
+<p>Créé un programme <code>exo_02.rb</code> qui affiche les lignes suivantes :</p>
+<pre><code class="language-bash">$ ruby exo_02.rb
+Bonjour, monde !
+Et avec une voix sexy, ça donne : Bonjour, monde !</code></pre>
+
+<p>En faisant une recherche Google, peux-tu connaître la différence entre <code>print</code> et <code>puts</code> ?</p>
+
+<h3>2.3. Il ne dit pas bonjour</h3>
+<p>Reprends ton programme <code>exo_02.rb</code>, puis écris un programme <code>exo_03.rb</code> qui est le même, mais avec <code>#</code> devant la ligne 2. Peux-tu me dire ce qu'il se passe ?</p>
+
+<h3>2.4. Ça marche pô 😢</h3>
+<p>Créé un programme <code>exo_04.rb</code> avec les lignes suivantes :</p>
+<pre><code class="language-ruby">puts "Salut, ça farte ?</code></pre>
+
+<p>Lance le programme. Que se passe-t-il ? Pourquoi ?</p>
+
+
+<h3>2.5. Opérations</h3>
+<p>Écris un programme <code>exo_05.rb</code> avec les lignes suivantes :</p>
+<pre><code class="language-ruby">puts "On va compter le nombre d'heures de travail à THP"
+puts "Travail : #{10 * 5 * 11}"
+puts "En minutes ça fait : #{10 * 5 * 11 * 60}"
+
+puts "Et en secondes ?"
+
+puts 10 * 5 * 11 * 60 * 60
+
+puts "Est-ce que c'est vrai que 3 + 2 < 5 - 7 ?"
+
+puts 3 + 2 < 5 - 7
+
+puts "Ça fait combien 3 + 2 ? #{3 + 2}"
+puts "Ça fait combien 5 - 7 ? #{5 - 7}"
+
+puts "Ok, c'est faux alors !"
+
+puts "C'est drôle ça, faisons-en plus :"
+
+puts "Est-ce que 5 est plus grand que -2 ? #{5 > -2}"
+puts "Est-ce que 5 est supérieur ou égal à -2 ? #{5 >= -2}"
+puts "Est-ce que 5 est inférieur ou égal à -2 ? #{5 <= -2}"
+</code></pre>
+
+<p>D'abord, que fait <code>#{}</code> ? Ensuite, mets un commentaire devant chacune des lignes et explique ce qu'elle fait.</p>
+
+<h3>2.6. Variables</h3>
+<p>Écris un programme <code>exo_06.rb</code> avec les lignes suivantes :</p>
+<pre><code class="language-ruby">number_of_hours_worked_per_day = 10
+number_of_days_worked_per_week = 5
+number_of_weeks_in_THP = 11
+
+puts "Travail : #{number_of_hours_worked_per_day * number_of_days_worked_per_week * number_of_weeks_in_THP}"</code></pre>
+
+<p>Lance-le programme, et essaie de le comprendre.</p>
+
+<p>Ajoute après la ligne suivante : </p>
+<pre><code class="language-ruby">puts "Et en minutes ça fait : #{number_of_minutes_in_an_hour * number_of_hours_worked_per_day * number_of_days_worked_per_week * number_of_weeks_in_THP}"</code></pre>
+
+<p>Lance-le programme. Que se passe-t-il ? Peux-tu l'expliquer ?</p>
+
+<p>Astuce : même si ton programme affiche une interface en français (les puts), les variables doivent avoir des noms en anglais, afin d'éviter un franglais bizarre. Même si Marc utilise dans son cours des noms de variables en français, je pense que lui-même doit interdire ceci à Drivy et imposer des noms de variables anglais 😉</p>
+
+<h3>2.7. Demander à l'utilisateur</h3>
+<p>Écris un programme <code>exo_07_a.rb</code> avec les lignes suivantes :</p>
+<pre><code class="language-ruby">puts "Bonjour, c'est quoi ton blase ?"
+user_name = gets.chomp
+puts user_name</code></pre>
+<p>Peux-tu me dire ce que fais <code>gets.chomp</code> ?</p>
+
+<p>Après, écris un programme <code>exo_07_b.rb</code> avec les lignes suivantes : </p>
+<pre><code class="language-ruby">puts "Bonjour, c'est quoi ton blase ?"
+print "> "
+user_name = gets.chomp
+puts user_name</code></pre>
+
+
+<p>Enfin, écris un programme <code>exo_07_c.rb</code> avec les lignes suivantes :</p>
+<pre><code class="language-ruby">user_name = gets.chomp
+puts user_name</code></pre>
+
+<p>Quelles sont les différences entre les trois programmes ?</p>
+
+<h3>2.8. Un programme qui dit bonjour</h3>
+<p>Écris un programme <code>exo_08.rb</code> qui demande le prénom de l'utilisateur, et qui salue l'utilisateur avec "Bonjour, <i>prénom</i> !"</p>
+
+<h3>2.9. Un programme qui dit bonjour de manière complète</h3>
+<p>Écris un programme <code>exo_09.rb</code> qui demande le prénom de l'utilisateur, qui lui demande après son nom de famille, et qui salue l'utilisateur avec "Bonjour, prénom nom !"</p>
+
+
+
+
+
+<h3>2.10. Un programme qui calcule des âges</h3>
+<p>Écris un programme <code>exo_10.rb</code> qui demande son année de naissance à l'utilisateur, puis qui ressort l'âge que l'utilisateur a eu en 2017.</p>
+
+<h3>2.11. Un programme qui répète</h3>
+<p>Écris un programme <code>exo_11.rb</code> qui demande un nombre à l'utilisateur, puis qui écrit autant de fois "Salut, ça farte ?"</p>
+
+<h3>2.12. Compter</h3>
+<p>Écris un programme <code>exo_12.rb</code> qui demande un nombre à l'utilisateur, puis qui compte jusqu'à ce nombre.</p>
+
+<h3>2.13. Afficher les années</h3>
+<p>Écris un programme <code>exo_13.rb</code> qui demande son année de naissance à l'utilisateur, puis qui va ressortir chaque année depuis son année de naissance jusqu'aujourd'hui.</p>
+
+<h3>2.14. Compte à rebours</h3>
+<p>Écris un programme <code>exo_14.rb</code> qui demande un nombre à l'utilisateur, puis qui affiche un compte à rebours à partir de ce nombre, jusqu'à 0.</p>
+
+<h3>2.15. Afficher tous les âges</h3>
+<p>Écris un programme <code>exo_15.rb</code> qui demande son année de naissance à l'utilisateur et qui va afficher chaque année depuis son année de naissance jusqu'aujourd'hui. Pour chaque année affichée, le programme devra annoncer l'âge que l'utilisateur avait cette année-là.</p>
+
+<h3>2.16. Virer les années</h3>
+<p>Le programme <code>exo_15.rb</code> est cool, mais on peut l'améliorer. Écris un programme <code>exo_16.rb</code> qui va demander son âge à l'utilisateur, et qui, pour chaque année depuis sa naissance, dira "Il y a X ans, tu avais Y ans".</p>
+
+<h3>2.17. Annoncer l'âge, option BG</h3>
+<p>Notre programme <code>exo_16.rb</code> est devenu beau gosse. Écris un programme <code>exo_17.rb</code> qui va faire la même chose, sauf que si X et Y sont égaux, il dira "Il y a n ans, tu avais la moitié de l'âge que tu as aujourd'hui".</p>
+
+<h3>2.18. Une liste d'email</h3>
+<p>Écris un programme <code>exo_18.rb</code> qui va créer une liste de 50 faux emails et les stocker dans une array. Voici le format que devront avoir les faux emails :</p>
+<pre><code class="language-ruby">"jean.dupont.01@email.fr"
+"jean.dupont.02@email.fr"
+etc..</code></pre>
+
+<h3>2.19. Afficher les bons emails</h3>
+<p>Prends le programme <code>exo_18.rb</code> et créé un programme <code>exo_19.rb</code> qui va reprendre l'array des emails créés, et n'afficher que les emails avec un nombre pair.</p>
+<pre><code class="language-ruby">"jean.dupont.02@email.fr"
+"jean.dupont.04@email.fr"
+etc..</code></pre>
+
+<h3>2.20. La pyramide</h3>
+<p>Construis un programme <code>exo_20.rb</code> qui va demander à l'utilisateur un nombre entre 1 et 25 et qui va sortir une pyramide à descendre d' autant d'étages que ce nombre. Voici un exemple :</p>
+<pre><code class="language-bash">Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?
+> 5
+Voici la pyramide :
+#
+##
+###
+####
+#####</code></pre>
+
+<h3>2.21. La pyramide, dans l'autre sens</h3>
+<p>Reprends ton programme <code>exo_20.rb</code> et fais un programme <code>pyramide.rb</code> qui montera au lieu de descendre : </p>
+<pre><code class="language-bash">Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?
+> 5
+Voici la pyramide :
+    #
+   ##
+  ###
+ ####
+#####</code></pre>
+
+<p>Bien que légèrement différent dans l'énoncé, ce programme est bien plus dur que le <code>exo_20.rb</code>, donc c'est normal de devoir réfléchir à comment le faire 😎</p>
+
+
+<h2>3. Rendu attendu</h2>
+<p>Le rendu attendu est un repository GitHub qui contient tous les exercices de cette journée, dont bien entendu les pyramides.</p>
+
+<h2>4. Pour aller plus loin</h2>
+
+<h3>4.1. La pyramide, avec une boucle de champions</h3>
+<p>Pour cet exercice, nous allons te demander de reprendre la pyramide de l'exercice <code>2.20</code> et de le faire avec une boucle <code>while</code>.</p>
+<p>Tu ne sais pas ce que c'est qu'une boucle while ? Cela tombe bien nous avons pensé à toi et voici <a href="https://zestedesavoir.com/tutoriels/634/une-introduction-a-ruby/497_les-bases/5050_les-boucles/#1-14483_la-boucle-while" target="_blank">une ressource qui explique cela</a>.</p>
+
+<h3>4.2. Pyramide de champions, avec une boucle de champions</h3>
+<p>Maintenant, dernier programme, la pyramide de mario des champions. Nous allons te demander de faire la pyramide de Mario avec une boucle while, dans le sens de l'exercice <code>2.21</code>.</p>
+
+

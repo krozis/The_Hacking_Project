@@ -1,0 +1,143 @@
+
+<h2>1. Introduction</h2>
+<p>Oh ouiii du RRRRubyyy ! Dans ce projet tu vas faire plein de programmes passionnants dans lesquels tu vas jouer avec des boucles, t'éclater avec des méthodes, et te sentir comme Champollion en Égypte quand il a enfin pigé ce que voulaient dire les hiéroglyphes. Par ailleurs, (tu vas dire qu'on insiste…) mais évidemment, toutes tes lignes de code devront être imbriqués dans des méthodes.</p>
+
+
+<h2>2. Le projet</h2>
+<p>Pour ce projet, crée un repository GitHub (un par équipe de pair-programmers). Pour chaque section du projet, tu devras créer un fichier qui contient les méthodes que l'on te demandera de faire. Afin d'éviter d'avoir un dossier un peu bordélique, range tous les programmes dans un dossier <code>lib</code> (c'est la convention de nommage pour les dossiers Ruby). À la fin, ton dossier devrait ressembler à ça :</p>
+
+<pre><code class="language-bash">ton_dossier
+├── lib
+│   ├── 00_hello.rb
+│   ├── 01_pyramids.rb
+│   ├── 02_password.rb
+│   └── 03_stairway.rb
+└── README.md</code></pre>
+
+<h3>2.1. Programme 0 : Hello !</h3>
+<p>Ton programme sera contenu dans un <code>lib/00_hello.rb</code>.</p>
+<p>Vald a besoin de toi pour l'écriture de sa prochaine chanson à succès : il lui faudrait un programme <a href="https://www.youtube.com/watch?v=x-VYdBKwSLc" target="_blank">qui dit bonjour</a>.</p>
+
+<h4>2.1.1 Dis bonjour</h4>
+
+<p>Code une méthode <code>say_hello</code> qui va dire bonjour quand on l'exécute. Ça devrait ressembler à quelque chose du genre :</p> 
+<pre><code class="language-ruby">def say_hello
+  # mon code ici
+end</code></pre>
+
+<h4>2.1.2 Coucou toi</h4>
+<p>Modifie la méthode pour qu'elle prenne désormais en entrée une variable <code>first_name</code> et que ton script affiche "Bonjour, <code>first_name</code> !"</p>
+
+<h4>2.1.3 Le combo</h4>
+<p>Maintenant rajoute une méthode <code>ask_first_name</code> qui demande à l'utilisateur son prénom et retourne le résultat avec un <code>return</code>. Combine-la avec ta <code>say_hello(first_name)</code> pour avoir un programme qui demande à l'utilisateur son prénom et lui dit bonjour.</p>
+
+
+<h3>2.2. Programme 1 : vacances en Égypte</h3>
+<p>Ton programme sera contenu dans un fichier <code>lib/01_pyramids.rb</code>.</p>
+
+<p>Ramsès II a été impressionné par ton savoir-faire architectural de précédemment et voudrait te débaucher pour construire des pyramides dont on parlera encore dans 4000 ans. Pas besoin de bipper Panoramix et sa bande pour le taff : Ruby sera ta potion magique.</p>
+
+<h4>2.2.1 Moitié de pyramide</h4>
+
+<p>Reprends ton deuxième exercice de la pyramide en l'encapsulant dans une méthode <code>half_pyramid</code>.</p>
+
+<h4>2.2.2 Pyramide de Gizeh</h4>
+<p>Catastrophe, cette pyramide ne tient pas debout, tout s'effondre sur le côté. Ramsès II a le sum, mais grâce à une superbe présentation PowerPoint bien pipeautée, tu as pu lui vendre la version premium de la pyramide : celle avec deux côtés. Champion 🔺</p>
+
+<p>Crée une méthode <code>full_pyramid</code> qui va construire plusieurs étages avec ce rendu dans le terminal : </p>
+<pre><code class="language-bash">Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ?
+> 5
+Voici la pyramide :
+    #
+   ###
+  #####
+ #######
+#########</code></pre>
+
+<h4>2.2.3. Alexandrie, Alexandra</h4>
+<p>Ramsou (ça y est vous êtes potos) vient d'avoir une idée de génie : il voudrait une pyramide en losange. Les normes de sécurité étant assez flex à l'époque, tu fonces sur l'occasion pour implémenter cette idée qui va (sûrement) rendre le monde meilleur.</p>
+
+<p>Crée une méthode <code>wtf_pyramid</code> qui va générer plusieurs étages de cette manière :</p>
+<pre><code class="language-bash">Salut, bienvenue dans ma super pyramide ! Combien d'étages veux-tu ? (choisis un nombre impair)
+> 9
+Voici la pyramide :
+    #
+   ###
+  #####
+ #######
+#########
+ #######
+  #####
+   ###
+    #</code></pre>
+
+<p>Là tu touches à un concept qui va changer le monde de l'architecture ! </p>
+<p><i>Bonus : envoie bouler l'utilisateur s'il saisit un nombre pair.</i></p>
+
+<h3>2.3. Programme 2 : Mon petit mot de passe</h3>
+<p>Ton programme sera contenu dans un fichier <code>lib/02_password.rb</code>.</p>
+
+<p>Ramsès II t'a recommandé auprès d'Edward Snowden pour coder un programme de cybersécurité. Le but est de faire un écran de sécurité qui demande à l'utilisateur de définir un mot de passe, et un autre qui lui demande de le saisir.
+</p>
+<ul>
+  <li>Tant que l'utilisateur ne donne pas le bon mot de passe, le programme le lui redemande.</li>
+  <li>Si l'utilisateur rentre le bon mot de passe, il accède à un espace secret.</li>
+</ul>
+
+<h4>2.3.1. Décomposition du programme</h4>
+<p>Le programme va se décomposer en trois parties :</p>
+
+<ul>
+  <li>une partie <code>signup</code>, demandant à l'utilisateur de définir un mot de passe</li>
+  <li>une partie <code>login</code>, demandant à l'utilisateur de rentrer son mot de passe jusqu'à ce qu'il corresponde à celui défini précédemment</li>
+  <li>une partie <code>welcome_screen</code>, affichant un écran de bienvenue avec des informations top secrètes de la NSA</li>
+</ul>
+
+<h4>2.3.2. Méthode signup</h4>
+<p>La partie signup sera assez simple, le programme va demander à l'utilisateur de définir un mot de passe et le garder en mémoire (en le stockant dans une variable).</p>
+
+<h4>2.3.2. Méthode login</h4>
+<p>La partie login va demander à l'utilisateur son mot de passe. Tant que l'utilisateur n'a pas rentré le même mot de passe que renseigné au moment du signup, le programme va lui dire qu'il s'est trompé et qu'il doit recommencer. Si l'utilisateur trouve le bon mot de passe, le programme va le rediriger vers l'écran d'accueil.</p>
+
+<h4>2.3.3. Méthode welcome_screen</h4>
+<p>L'écran d'accueil va dire à l'utilisateur qu'il est bienvenu dans sa zone secrète, et lui dire quelques secrets (par exemple le contenu – supposé – des textos et messages WhatsApp du téléphone d'un des membres de ton groupe).</p>
+
+<h4>2.3.4. Méthode perform</h4>
+<p>Maintenant englobe l'exécution de chaque méthode dans une méthode <code>perform</code> qui va appeler chaque morceau de code dans le bon ordre.</p>
+
+
+<h3>2.4. Programme 3 : 6ème sans ascenseur</h3>
+<p>Ton programme sera contenu dans un fichier <code>lib/03_stairway.rb</code>.</p>
+
+
+<h4>2.4.1. Jeu vidéo</h4>
+<p>Tu vas maintenant coder un super jeu qui déchire. Mario n'a qu'à bien se tenir avec sa pyramide ! Nous allons imaginer un programme dans lequel une gentille personne va devoir monter 10 marches en fonction d'un jet de dé. Une version informatique du jeu de l'oie en quelque sorte !</p>
+
+<p>Voici comment cela va se dérouler : à l'exécution, le programme lance une partie. Le joueur est tout en bas d'un escalier à 10 marches, et à chaque tour il va lancer un dé :</p>
+<ul>
+    <li>S’il fait <code>5</code> ou <code>6</code>, il avance d'une marche et le programme le lui dit (ainsi que la marche où il est à présent)</li>
+    <li>S’il fait <code>1</code>, il descend d'une marche et le programme le lui dit (ainsi que la marche où il est à présent)</li>
+    <li>S’il fait <code>2</code>, <code>3</code>, ou <code>4</code> rien ne se passe, et le programme le lui dit (ainsi que la marche où il est resté)</li>
+</ul>
+
+<p>Quand le joueur atteint la 10ème marche, le programme l'en informe avec un message super enthousiaste, et le jeu se termine.</p>
+
+
+<h4>2.4.2. Statistiques</h4>
+<p>L'une des grandes forces de l'informatique est de pouvoir faire un nombre conséquent d'itérations et de pouvoir sortir des moyennes et médianes très facilement.</p>
+
+<p>Fais donc une méthode <code>average_finish_time</code> qui va simuler au moins 100 parties, et te retourner le nombre de tours moyen pour arriver à la 10ème marche.</p>
+
+<h2>3. Rendu attendu</h2>
+<p>Un joli repo GitHub (un par groupe de pair-programming) avec les fichiers <code>.rb</code> correspondant aux exercices ci-dessus. Pour rappel, voici la structure attendue :</p>
+<pre><code class="language-bash">ton_repo
+├── lib
+│   ├── 00_hello.rb
+│   ├── 01_pyramids.rb
+│   ├── 02_password.rb
+│   └── 03_stairway.rb
+└── README.md</code></pre>
+
+<p>Petit conseil : afin d'aider tes futurs correcteurs, nous allons te demander de laisser les méthodes <code>perform</code> dans les programmes, ce qui permettra de les lancer et les tester facilement.</p>
+
+<p>Pensez bien à rédiger un peu le <code>README.md</code> avec une petite explication du fonctionnement de chaque fichier et vos noms/prénoms/pseudo sur Slack.</p>

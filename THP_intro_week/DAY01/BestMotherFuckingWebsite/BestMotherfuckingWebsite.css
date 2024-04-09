@@ -1,0 +1,154 @@
+body
+{
+	font-family: Open_Sans, Arial;
+	font-size: 16px;
+	color: #454545;
+	text-align: justify;
+	line-height: 1.4;
+	margin: 2em auto;
+	max-width: 800px;
+	padding: 1em;
+}
+
+aside
+{
+	margin-top: -1em;
+}
+
+strong
+{
+	color: #C0392B;
+	text-decoration: underline;
+}
+
+a
+{
+	color: #07A;
+}
+
+a:visited
+{
+	color: #941352;
+}
+
+.mfw, .mfw:visited
+{
+	color: #730000;
+}
+
+.minitext
+{
+	font-size: 0.4em;
+}
+
+.shittyblue
+{
+	color: #00E;
+}
+
+.violetish
+{
+	color: #551A8B;
+}
+
+.rainbow
+{
+	color: greenyellow;
+}
+
+#four
+{
+	color: #444;
+	font-weight: 700;
+}
+
+#four::before
+{
+	content: " ";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin: auto 0.2em;
+	background-color: #444;
+}
+
+#fourfive
+{
+	color: #454545;
+	font-weight: 700;
+}
+
+#fourfive::before
+{
+	content: " ";
+	display: inline-block;
+	width: 1em;
+	height: 1em;
+	margin: auto 0.2em;
+	background-color: #454545;
+}
+
+#catzone
+{
+	display: flex;
+}
+
+.cz1
+{
+	flex: 40;
+	font-size: 0.7em;
+}
+
+.cz2
+{
+	flex: 60;
+}
+
+blockquote
+{
+	color: #456;
+}
+
+blockquote::before
+{
+	content: open-quote;
+	color: #666;
+	font-size: 2.2em;
+	font-weight: 600;
+	font-family: 'Times New Roman', Times, Arial;
+	margin-right: 0.2em;
+	width: 1.2rem;
+}
+
+author
+{
+	font-style: oblique;
+	font-size: 0.6em;
+	margin-left: 2.4em;
+}
+
+author::before
+{
+	content: "- ";
+	margin-right: 1em;
+}
+
+.visitedlink, .visitedlink:visited
+{
+	color: #941352;
+}
+
+.miniquote
+{
+	vertical-align: top;
+	font-size: 0.7em;
+	padding-left: 0.3em;
+}
+
+.kopimi
+{
+	display:flex;
+	margin-right: auto;
+	margin-left: auto;
+	height: 2em;
+}
